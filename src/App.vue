@@ -4,7 +4,7 @@
   <div v-for="(arr, idx) in products" :key="arr">{{ arr }}{{ idx }}</div>
   <button v-on:click="count++">숫자 추가</button>
   <button @click="count++">숫자 추가</button>
-  <button @mouseover="count++">숫자 추가</button>
+  <button @mouseover="addCount">숫자 추가</button>
   <span>count: {{ count }}</span>
 </template>
 
@@ -19,6 +19,11 @@ export default {
       products: ['일반 Array', '일반 Array', '일반 Array'],
       count: 0,
     };
+  },
+  methods: {
+    addCount() {
+      this.count++;
+    },
   },
 };
 </script>
