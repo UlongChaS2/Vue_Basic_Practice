@@ -1,20 +1,22 @@
 <template>
-  <div>test</div>
+  <div :style="customStyle">{{ check1 }}</div>
+  <div>{{ check2 }}</div>
+  <button>버튼</button>
+  <div v-for="(arr, idx) in products" :key="arr">{{ arr }}{{ idx }}</div>
 </template>
 
 <script>
 export default {
-  name: 'app',
+  name: 'App',
+  data() {
+    return {
+      check1: '데이터',
+      check2: '확인',
+      customStyle: 'color: blue',
+      products: ['일반 Array', '일반 Array', '일반 Array'],
+    };
+  },
 };
 </script>
 
-<style>
-#test {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
