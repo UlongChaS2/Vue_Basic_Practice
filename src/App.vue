@@ -2,10 +2,12 @@
   <div :style="customStyle">{{ check1 }}</div>
   <div>{{ check2 }}</div>
   <div v-for="(arr, idx) in products" :key="arr">{{ arr }}{{ idx }}</div>
-  <button v-on:click="count++">숫자 추가</button>
-  <button @click="count++">숫자 추가</button>
-  <button @mouseover="addCount">숫자 추가</button>
-  <span>count: {{ count }}</span>
+  <button v-on:click="count[0]++">숫자 추가</button
+  ><span>count: {{ count[0] }}</span>
+  <button @click="count[1]++">숫자 추가</button
+  ><span>count: {{ count[1] }}</span>
+  <button @mouseover="addCount">숫자 추가</button
+  ><span>count: {{ count[2] }}</span>
 </template>
 
 <script>
@@ -17,12 +19,12 @@ export default {
       check2: '확인',
       customStyle: 'color: blue',
       products: ['일반 Array', '일반 Array', '일반 Array'],
-      count: 0,
+      count: [0, 0, 0],
     };
   },
   methods: {
     addCount() {
-      this.count++;
+      this.count[2]++;
     },
   },
 };
