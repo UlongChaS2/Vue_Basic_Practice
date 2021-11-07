@@ -1,0 +1,19 @@
+.note {
+  margin: 10px 0;
+}
+
+.noteInside {
+  position: relative;
+  padding: 10px;
+  padding-left: 15px;
+  background-color: lightgray;
+}
+.noteInside::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 3px;
+  height: 55%;
+  background-color: black;
+}
