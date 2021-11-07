@@ -9,6 +9,8 @@
       <Section03 />
       <hr />
       <Section04 />
+      <hr />
+      <Section05 />
       <!-- <div v-for="(arr, idx) in products" :key="arr">{{ arr }}{{ idx }}</div>
       <button v-on:click="count[0]++">숫자 추가</button
       ><span>count: {{ count[0] }}</span>
@@ -25,6 +27,7 @@ import Section01 from '@/components/Section01/Section01';
 import Section02 from '@/components/Section02/Section02';
 import Section03 from '@/components/Section03/Section03';
 import Section04 from '@/components/Section04/Section04';
+import Section05 from '@/components/Section05/Section05';
 
 export default {
   name: 'App',
@@ -44,6 +47,7 @@ export default {
     Section02,
     Section03,
     Section04,
+    Section05,
   },
 };
 </script>
